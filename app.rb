@@ -5,7 +5,7 @@ require 'sinatra/reloader'
 
 # main page
 get '/' do
-	erb "Hello! <a href=\"https://github.com/bootstrap-ruby/sinatra-bootstrap\">Original</a> pattern has been modified for <a href=\"http://rubyschool.us/\">Ruby School</a>"
+	erb "Welcome to Barber Shop!"
 end
 
 
@@ -46,7 +46,7 @@ post '/contacts' do
 	@message = "Dear #{@user_email} Your message has been sent."
 
 	f = File.open './public/contacts.txt', 'a'
-	f.write "User: #{@user_email}, Text: #{@user_text}."
+	f.write "User: #{@user_email}, Text: #{@user_text}.\n"
 	f.close
 
 	erb :message
