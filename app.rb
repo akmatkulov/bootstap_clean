@@ -30,6 +30,7 @@ post '/visit' do
 	f = File.open './public/user.txt', 'a'
 	f.write "User: #{@user_name}, Phone: #{@phone}, Date and Time: #{@date_time}.\n"
 	f.close
+
 	erb :message
 end
 
